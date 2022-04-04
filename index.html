@@ -9,21 +9,14 @@
   </head>
   <body>
     <aside class="sidenav">
-      <div id="list1" class="dropdown-check-list" tabindex="100">
-        <span class="anchor">Streaming Service</span>
-        <ul class="items">
-          <li><input type="checkbox" />Netflix</li>
-          <li><input type="checkbox" />Paramount</li>
-          <li><input type="checkbox" />Hulu</li>
-          <li><input type="checkbox" />Sling</li>
-          <li><input type="checkbox" />Disney+</li>
-          <li><input type="checkbox" />Tubi</li>
-          <li><input type="checkbox" />Crackle</li>
-        </ul>
-      </div>
-      <div id="list2" class="dropdown-check-list" tabindex="100">
+      <select id="sort-by">
+        <option value="Year">Year</option>
+        <option value="imdbRating">IMDB</option>
+        <option value="runtime">IMDB</option>
+      </select>
+      <div id="genre-container" class="dropdown-check-list" tabindex="100">
         <span class="anchor">Genre</span>
-        <ul class="items">
+        <ul id="genre-checkbox-list" class="items">
           <li><input type="checkbox" />Action</li>
           <li><input type="checkbox" />Comedy</li>
           <li><input type="checkbox" />Drama</li>
@@ -35,6 +28,17 @@
           <li><input type="checkbox" />Thriller</li>
         </ul>
       </div>
+      <div id="rated-container" class="dropdown-check-list" tabindex="100">
+        <span class="anchor">Genre</span>
+        <ul id="rated-checkbox-list" class="items">
+          <li><input type="checkbox" />"G"</li>
+          <li><input type="checkbox" />"PG"</li>
+          <li><input type="checkbox" />"PG-13"</li>
+          <li><input type="checkbox" />"R"</li>
+          <li><input type="checkbox" />"NR"</li>
+        </ul>
+      </div>
+
       <section id="picked-movies-cont">
         <!--  -->
       </section>
@@ -49,6 +53,8 @@
         <button type="button">Dislike</button>
       </div>
     </div>
-    <link rel="script" href="./assets/script/script.js" />
+
+    <script src="./assets/script/data-functions.js"></script>
+    <script src="./assets/script/script.js"></script>
   </body>
 </html>
