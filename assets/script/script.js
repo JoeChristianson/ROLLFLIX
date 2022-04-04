@@ -5,3 +5,5 @@
 //   else
 //     checkList.classList.add('visible');
 // }
+
+renderPicks()
