@@ -31,7 +31,7 @@ const getRandomMovie = async ()=>{
 const addMovieToPicks = ()=>{
     picks.push(current);
     localStorage.setItem("picks",JSON.stringify(picks));
-    console.log(`${picks[-1].Title} has been added to the picks`)
+    console.log(`${picks[picks.length-1].Title} has been added to the picks`)
     console.log(picks);
     getRandomMovie();
 }
