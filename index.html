@@ -12,7 +12,18 @@
     <title>Document</title>
   </head>
   <body>
+    <section class="hero is-link">
+      <div class="hero-body">
+        <p class="title">
+          Link hero
+        </p>
+      </div>
+    </section>
+
+    
     <aside class="sidenav">
+      <input class="input" type="text" placeholder="Text input">
+      <button class="button">Button</button>
       <select id="sort-by">
         <option value="Year">Year</option>
         <option value="imdbRating">IMDB</option>
@@ -37,7 +48,7 @@
         </ul>
       </div>
       <div id="rated-container" class="dropdown-check-list" tabindex="100">
-        <span class="anchor">Genre</span>
+        <span class="anchor">Rating</span>
         <ul id="rated-checkbox-list" class="items">
           <li><input type="checkbox" />"G"</li>
           <li><input type="checkbox" />"PG"</li>
@@ -51,16 +62,47 @@
         <!--  -->
       </section>
     </aside>
+
     <div class="main">
       <h1>Movie Generator</h1>
 
-      <div><img src="" alt="Movie Poster" /></div>
-      <div>
+      <figure class="image is-128x128">
+        <img src="https://bulma.io/images/placeholders/128x128.png">
+      </figure>      
         <button type="button">Random</button>
         <button type="button">Like</button>
         <button type="button">Dislike</button>
+     
+
+    <div class="columns">
+      <!-- <div class="column">
+        <p class="bd-notification is-info">First column</p>
+        <div class="columns is-mobile">
+          <div class="column">
+            <p class="bd-notification is-info">First nested column</p>
+          </div> -->
+          <div class="column">
+            <p class="bd-notification is-info">Second nested column</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-danger">Second column</p>
+        <div class="columns is-mobile">
+          <div class="column is-half">
+            <p class="bd-notification is-danger">50%</p>
+          </div>
+          <div class="column">
+            <p class="bd-notification is-danger">Auto</p>
+          </div>
+          <div class="column">
+            <p class="bd-notification is-danger">Auto</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.slim.js"
