@@ -6,4 +6,15 @@
 //     checkList.classList.add('visible');
 // }
 
-renderPicks()
+
+const fillDummyPicks = async ()=>{
+  await getRandomMovie();
+  addMovieToPicks();
+}
+
+for (let i = picks.length;i<10;i++){
+  fillDummyPicks()
+}
+
+const searchParams = {search:"",genre:"",rated:"",sortProperty:"Year",descending:true};
+renderPicks(searchParams)

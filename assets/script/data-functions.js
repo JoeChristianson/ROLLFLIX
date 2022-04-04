@@ -18,6 +18,7 @@ const getRandomMovie = async ()=>{
     // this gets more details about the movie
     const response = await fetch(baseURL+movieTitle)
     const data = await response.json();
+    console.log(data)
     if(!data.Title){
         await getRandomMovie()
     }
@@ -37,20 +38,28 @@ const addMovieToPicks = ()=>{
 }
 
 // properties can be Year, Title, imdbRating, MetaScore descending is boolean;
-const sortMovies = (property,descending)=>{
+const sortMovies = (property,descending,arr)=>{
     if (descending){
-        picks.sort((a, b) => {
+        arr.sort((a, b) => {
              return a[property]>b[property] ? -1 : 1})
     }
-    else{picks.sort((a, b) => {
+    else{arr.sort((a, b) => {
          return a[property]>b[property] ? 1 : -1})};
         console.log(`These are the picks sorted by ${property} in ${descending?"descending":"ascending"} order`)
-    console.log(picks)
+    console.log(arr)
 }
 
-function filterMovies(property,string){
-    const filteredPicks = picks.filter(pick=>{
+function filterMovies(property,string,array){
+    const filteredPicks = array.filter(pick=>{
         return pick[property].includes(string)
+    }) 
+    console.log(filteredPicks);
+    return filteredPicks;
+}
+
+function strictFilterMovies(property,string,array){
+    const filteredPicks = array.filter(pick=>{
+        return pick[property] === string;
     }) 
     console.log(filteredPicks);
     return filteredPicks;
