@@ -49,3 +49,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
         picksContainer.append(btn);
     }
 }
+
+function renderMain(title){
+    
+}
