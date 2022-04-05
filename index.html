@@ -20,79 +20,95 @@
   </section>
 
   <div class="columns">
-    <div class="column is-2">
-      <aside class="sidenav">
-        <input class="input" type="text" placeholder="Text input">
-        <select id="sort-by">
-          <option value="Year">Year</option>
-          <option value="imdbRating">IMDB</option>
-          <<<<<<< Updated upstream <option value="runtime">IMDB</option>
-            =======
-            <option value="runtime">Runtime</option>
-            >>>>>>> Stashed changes
-        </select>
-        <div id="genre-container" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Genre</span>
-          <ul id="genre-checkbox-list" class="items">
-            <li><input type="checkbox" />Action</li>
-            <li><input type="checkbox" />Comedy</li>
-            <li><input type="checkbox" />Drama</li>
-            <li><input type="checkbox" />Fantasy</li>
-            <li><input type="checkbox" />Horror</li>
-            <li><input type="checkbox" />Romance</li>
-            <li><input type="checkbox" />Western</li>
-            <li><input type="checkbox" />Sci-Fi</li>
-            <li><input type="checkbox" />Thriller</li>
-          </ul>
+    <div class="column">
+      <p class="movieGenerator" id="title">
+        <button class="button thumbUp is-large"> &#128077
+        </button>
+        <button class="button is-large">Random Movie</button>
+       
+        <button class="button thumbDown is-large">&#128078
+        </button>
+      </p>
+
+      <div class="columns">
+        <div class="column is-2">
+          <aside class="sidenav">
+            <input class="input" type="text" placeholder="Text input">
+            <select id="sort-by">
+              <option value="Year">Year</option>
+              <option value="imdbRating">IMDB</option>
+              <<<<<<< Updated upstream <option value="runtime">IMDB</option>
+                =======
+                <option value="runtime">Runtime</option>
+                >>>>>>> Stashed changes
+            </select>
+            <div id="genre-container" class="dropdown-check-list" tabindex="100">
+              <span class="anchor">Genre</span>
+              <ul id="genre-checkbox-list" class="items">
+                <li><input type="checkbox" />Action</li>
+                <li><input type="checkbox" />Comedy</li>
+                <li><input type="checkbox" />Drama</li>
+                <li><input type="checkbox" />Fantasy</li>
+                <li><input type="checkbox" />Horror</li>
+                <li><input type="checkbox" />Romance</li>
+                <li><input type="checkbox" />Western</li>
+                <li><input type="checkbox" />Sci-Fi</li>
+                <li><input type="checkbox" />Thriller</li>
+              </ul>
+            </div>
+            <div id="rated-container" class="dropdown-check-list" tabindex="100">
+              <span class="anchor">Rating</span>
+              <ul id="rated-checkbox-list" class="items">
+                <li><input type="checkbox" />"G"</li>
+                <li><input type="checkbox" />"PG"</li>
+                <li><input type="checkbox" />"PG-13"</li>
+                <li><input type="checkbox" />"R"</li>
+                <li><input type="checkbox" />"NR"</li>
+              </ul>
+            </div>
+            <section id="picked-movies-cont">
+            </section>
+          </aside>
         </div>
-        <div id="rated-container" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Rating</span>
-          <ul id="rated-checkbox-list" class="items">
-            <li><input type="checkbox" />"G"</li>
-            <li><input type="checkbox" />"PG"</li>
-            <li><input type="checkbox" />"PG-13"</li>
-            <li><input type="checkbox" />"R"</li>
-            <li><input type="checkbox" />"NR"</li>
-          </ul>
+        <div class="column is-2">Queued movie results
         </div>
-        <section id="picked-movies-cont">
-        </section>
-      </aside>
+        <div class="column is-4">movie poster and info
+          <figure class="image is-128x128">
+            <img src="https://bulma.io/images/placeholders/256x256.png">
+          </figure>
+        </div> 
+        <div class="column is-4">Movie Review
+        </div>
+        
+        </div>
+      </div>
     </div>
-    <div class="column is-2">
-      Queued movie results
-    </div>
-    <div class="column is-2">
-      movie poster</div>
-    <div class="column is-2">
-      movie information
-      <!-- <div class="main">
+    
+      
+
+
+
+
+          <!-- <div class="main">
         <h1>Movie Generator</h1>
 
-        <figure class="image is-128x128">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
-        </figure>
+       
         <button type="button">Random</button>
         <button type="button">Like</button>
         <button type="button">Dislike</button>
       </div> -->
-      </div>
-      <div class="column is-4">
-        movie review
-      </div>
+       
 
 
-
-    </div>
-  </div>
+     
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <script src="./assets/script/data-functions.js"></script>
-  <script src="./assets/script/rendering.js"></script>.
-  <script src="./assets/script/event-listeners.js"></script>
-  <script src="./assets/script/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./assets/script/data-functions.js"></script>
+    <script src="./assets/script/rendering.js"></script>.
+    <script src="./assets/script/event-listeners.js"></script>
+    <script src="./assets/script/script.js"></script>
 </body>
 
 </html>
