@@ -43,10 +43,14 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     }
     filteredPicks = [...newPicks];
     sortMovies(sortProperty,descending,filteredPicks);
+    const titles = []
     for (let i = 0;i<(Math.min(filteredPicks.length,10));i++){
         const btn = $("<button>")
         btn.text(filteredPicks[i].Title);
-        picksContainer.append(btn);
+        if (!titles.includes(filteredPicks[i].title)){
+            picksContainer.append(btn);
+        }        
+        titles.push[filteredPicks[i].title]
     }
 }
 
