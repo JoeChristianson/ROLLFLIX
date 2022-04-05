@@ -22,11 +22,11 @@
   <div class="columns">
     <div class="column">
       <p class="movieGenerator" id="title">
-        <button class="button thumbUp is-large is-dark"> &#128077
+        <button class="button thumbUp is-large"> &#128077
         </button>
-        <button class="button is-large is-dark">Random Movie</button>
-       
-        <button class="button thumbDown is-large is-dark">&#128078
+        <button class="button randomMovie is-large">Random Movie</button>
+
+        <button class="button thumbDown is-large">&#128078
         </button>
       </p>
 
@@ -45,25 +45,25 @@
             <div id="genre-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
               <ul id="genre-checkbox-list" class="items">
-                <li><input value="Action" type="checkbox" />Action</li>
-                <li><input value="Comedy" type="checkbox" />Comedy</li>
-                <li><input value="Drama" type="checkbox" />Drama</li>
-                <li><input value="Fantasy" type="checkbox" />Fantasy</li>
-                <li><input value="Horror" type="checkbox" />Horror</li>
-                <li><input value="Romance" type="checkbox" />Romance</li>
-                <li><input value="Western" type="checkbox" />Western</li>
-                <li><input value="Sci-Fi" type="checkbox" />Sci-Fi</li>
-                <li><input value="Thriller" type="checkbox" />Thriller</li>
+                <li><input checked value="Action" type="checkbox" />Action</li>
+                <li><input checked value="Comedy" type="checkbox" />Comedy</li>
+                <li><input checked value="Drama" type="checkbox" />Drama</li>
+                <li><input checked value="Fantasy" type="checkbox" />Fantasy</li>
+                <li><input checked value="Horror" type="checkbox" />Horror</li>
+                <li><input  checked value="Romance" type="checkbox" />Romance</li>
+                <li><input checked value="Western" type="checkbox" />Western</li>
+                <li><input checked value="Sci-Fi" type="checkbox" />Sci-Fi</li>
+                <li><input checked value="Thriller" type="checkbox" />Thriller</li>
               </ul>
             </div>
             <div id="rated-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Rating</span>
               <ul id="rated-checkbox-list" class="items">
-                <li><input value="G" type="checkbox" />"G"</li>
-                <li><input value="PG" type="checkbox" />"PG"</li>
-                <li><input value="PG-13" type="checkbox" />"PG-13"</li>
-                <li><input value="R" type="checkbox" />"R"</li>
-                <li><input value="NR" type="checkbox" />"NR"</li>
+                <li><input checked value="G" type="checkbox" />"G"</li>
+                <li><input checked value="PG" type="checkbox" />"PG"</li>
+                <li><input checked value="PG-13" type="checkbox" />"PG-13"</li>
+                <li><input checked value="R" type="checkbox" />"R"</li>
+                <li><input checked value="NR" type="checkbox" />"NR"</li>
               </ul>
             </div>
             <section id="picked-movies-cont">
@@ -72,24 +72,42 @@
         </div>
         <div class="column is-2">Queued movie results
         </div>
+
         <div class="column is-4">movie poster and info
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/images/placeholders/256x256.png">
-          </figure>
-        </div> 
-        <div class="column is-4">Movie Review
+          <div class="card">
+            <div class="card-content">
+              <figure class="image is-128x128">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+              </figure>
+        
+              <div id="title"></div>
+              <div id="year"></div>
+              <div id="rated"></div>
+              <div id="genre"></div>
+              <div id="runtime"></div>
+              <div id="imdbRating"></div>
+              <div id="plot"></div>
+            </div>
+          </div>
         </div>
         
+            <div class="column is-4">Movie Review
+              <div class="card">
+                <div class="card-content">
+            <div id ="movieReview"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    
-      
+  </div>
 
 
 
 
-          <!-- <div class="main">
+
+
+  <!-- <div class="main">
         <h1>Movie Generator</h1>
 
        
@@ -97,18 +115,19 @@
         <button type="button">Like</button>
         <button type="button">Dislike</button>
       </div> -->
-       
 
 
-     
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="./assets/script/data-functions.js"></script>
-    <script src="./assets/script/rendering.js"></script>.
-    <script src="./assets/script/event-listeners.js"></script>
-    <script src="./assets/script/script.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script src="./assets/script/pull-search-values.js"></script>
+  <script src="./assets/script/data-functions.js"></script>
+  <script src="./assets/script/rendering.js"></script>
+  <script src="./assets/script/event-listeners.js"></script>
+  <script src="./assets/script/script.js"></script>
 </body>
 
 </html>
