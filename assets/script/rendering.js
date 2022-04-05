@@ -1,4 +1,13 @@
 const picksContainer = $("#picked-movies-cont")
+const title = $("#title");
+const year = $("#year");
+const rated = $("#rated")
+const genres = $("#genre")
+const runtime = $("#runtime")
+const imdbRating = $("#imdbRating")
+const plot = $("#plot")
+// TO DO: image id
+const image = $("img")
 
 const renderPicks = ({search,genre,rated,sortProperty,descending})=>{
     picksContainer.html("")
@@ -55,6 +64,20 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     }
 }
 
-function renderMain(title){
-    
+async function renderNew(){
+    const movie = await getRandomMovie();
+
+    console.log(movie)
+    title.text(movie.Title);
+    year.text(movie.Year);
+    rated.text(movie.Rated);
+    genres.text(movie.Genre);
+    runtime.text(movie.Runtime);
+    imdbRating.text(movie.imdbRating)
+    plot.text(movie.Plot)
+    image.attr("src",movie.Poster)
+}
+
+function renderOld(title){
+
 }

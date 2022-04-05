@@ -25,6 +25,7 @@ const getRandomMovie = async ()=>{
         console.log(`${data.Title} has been randomly chosen and should be displayed`)
     current = data;
     }
+    return current;
 }
 
 const addMovieToPicks = ()=>{
