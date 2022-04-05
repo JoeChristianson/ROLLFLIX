@@ -39,6 +39,7 @@ const addMovieToPicks = ()=>{
 
 // properties can be Year, Title, imdbRating, MetaScore descending is boolean;
 const sortMovies = (property,descending,arr)=>{
+    console.log(descending)
     if (descending){
         arr.sort((a, b) => {
              return a[property]>b[property] ? -1 : 1})
