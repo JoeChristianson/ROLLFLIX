@@ -16,5 +16,9 @@ for (let i = picks.length;i<10;i++){
   fillDummyPicks()
 }
 
-const searchParams = {search:"",genre:"All Genres",rated:"All Ratings",sortProperty:"imdbRating",descending:true};
-renderPicks(searchParams)
+const searchParams = {search:"",
+                      genres:["Crime","Comedy","Action"],
+                      ratings:["G","PG","R"],
+                      sortProperty:"imdbRating",
+                      descending:true};
+renderPicksSp(searchParams)
