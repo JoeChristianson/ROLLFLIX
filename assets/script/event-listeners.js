@@ -24,8 +24,6 @@ sortBy.on("change",(event)=>{
 })
 
 
-
-
 pickedMovies.on("click","button",(event)=>{
     console.log(event.target.innerText + "has been chosen");
 })
