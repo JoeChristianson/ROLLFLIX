@@ -1,5 +1,5 @@
 const APIkey = "72f4250f";
-const baseURL = `http://www.omdbapi.com/?apikey=${APIkey}&type=movie&t=`;
+const baseURL = `https://www.omdbapi.com/?apikey=${APIkey}&type=movie&t=`;
 // picks are the movies that have been saved
 const picks = JSON.parse(localStorage.getItem("picks")) || [];
 // this is the currently displayed movie object
