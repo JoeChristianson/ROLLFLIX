@@ -1,3 +1,17 @@
+
+.movieGenerator{
+  margin-bottom:5px;
+  border-bottom: black solid 3px;
+  padding: 10px;
+  text-align: center;
+  font-size:large;
+}
+
+.button {
+  border: solid black 2px;
+  align-items:center;
+}
+
 /* .dropdown-check-list {
     display: inline-block;
   }
