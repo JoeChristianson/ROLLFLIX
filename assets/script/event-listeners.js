@@ -1,0 +1,1 @@
+const genreChecklist = $("#genre-checkbox-list")
