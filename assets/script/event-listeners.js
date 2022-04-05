@@ -8,19 +8,19 @@ console.log(searchText)
 
 
 searchText.on("keydown",(event)=>{
-    console.log("input changed")
+    pullVals()
 })
 
 genreChecklist.on("click","input",(event)=>{
-    console.log("genres changed")
+    pullVals()
 })
 
 ratedChecklist.on("click","input",(event)=>{
-    console.log("rated changed")
+    pullVals()
 })
 
 sortBy.on("change",(event)=>{
-    console.log("change in sort")
+    pullVals()
 })
 
 

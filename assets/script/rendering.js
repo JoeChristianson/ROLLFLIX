@@ -35,7 +35,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     filteredPicks = [...newPicks];
     newPicks = [];
     for(let rating of ratings){
-        const picksToAdd = filterMovies("Rated",rating,filteredPicks);
+        const picksToAdd = strictFilterMovies("Rated",rating,filteredPicks);
         newPicks.concat(picksToAdd)
         picksToAdd.forEach(pick=>{
             newPicks.push(pick)
@@ -47,10 +47,11 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     for (let i = 0;i<(Math.min(filteredPicks.length,10));i++){
         const btn = $("<button>")
         btn.text(filteredPicks[i].Title);
-        if (!titles.includes(filteredPicks[i].title)){
+        if (!titles.includes(filteredPicks[i].Title)){
             picksContainer.append(btn);
+            titles.push(filteredPicks[i].Title)
         }        
-        titles.push[filteredPicks[i].title]
+        console.log(titles);
     }
 }
 
