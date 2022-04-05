@@ -1,5 +1,10 @@
 const picksContainer = $("#picked-movies-cont")
 
+
+
+
+
+
 const renderPicks = ({search,genre,rated,sortProperty,descending})=>{
     picksContainer.html("")
     let filteredPicks = fullSearch(search)
@@ -55,6 +60,11 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     }
 }
 
-function renderMain(title){
-    
+async function renderNew(){
+    const movie = await getRandomMovie();
+    console.log(movie)
+}
+
+function renderOld(title){
+
 }
