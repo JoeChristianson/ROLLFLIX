@@ -20,80 +20,95 @@
   </section>
 
   <div class="columns">
-    <div class="column is-2">
-      <aside class="sidenav">
-        <input class="input" type="text" placeholder="Text input">
-        <select id="sort-by">
-          <option value="Year">Year</option>
-          <option value="imdbRating">IMDB</option>
-          <<<<<<< Updated upstream <option value="runtime">IMDB</option>
-            =======
-            <option value="runtime">Runtime</option>
-            >>>>>>> Stashed changes
-        </select>
-        <div id="genre-container" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Genre</span>
-          <ul id="genre-checkbox-list" class="items">
-            <li><input type="checkbox" value="Action"/>Action</li>
-            <li><input type="checkbox" value="Comedy"/>Comedy</li>
-            <li><input type="checkbox" value="Drama"/>Drama</li>
-            <li><input type="checkbox" value="Fantasy"/>Fantasy</li>
-            <li><input type="checkbox" value="Horror"/>Horror</li>
-            <li><input type="checkbox" value="Romance"/>Romance</li>
-            <li><input type="checkbox" value="Western"/>Western</li>
-            <li><input type="checkbox" value="Sci-Fi"/>Sci-Fi</li>
-            <li><input type="checkbox" value="Thriller"/>Thriller</li>
-          </ul>
-        </div>
-        <div id="rated-container" class="dropdown-check-list" tabindex="100">
-          <span class="anchor">Rating</span>
-          <ul id="rated-checkbox-list" class="items">
-            <li><input type="checkbox" value="G">G"</li>
-            <li><input type="checkbox" value="PG">PG"</li>
-            <li><input type="checkbox" value="PG-13">PG-13"</li>
-            <li><input type="checkbox" value="R">R"</li>
-            <li><input type="checkbox" value="NR">NR"</li>
-          </ul>
-        </div>
-        <section id="picked-movies-cont">
-        </section>
-      </aside>
-    </div>
-    <div class="column is-2">
-      Queued movie results
-    </div>
-    <div class="column is-2">
-      movie poster</div>
-    <div class="column is-2">
-      movie information
-      <!-- <div class="main">
-        <h1>Movie Generator</h1>
+    <div class="column">
+      <p class="movieGenerator" id="title">
+        <button class="button thumbUp is-large is-dark"> &#128077
+        </button>
+        <button class="button is-large is-dark">Random Movie</button>
+       
+        <button class="button thumbDown is-large is-dark">&#128078
+        </button>
+      </p>
 
-        <figure class="image is-128x128">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
-        </figure>
+      <div class="columns">
+        <div class="column is-2">
+          <aside class="sidenav">
+            <input class="input" type="text" placeholder="Text input">
+            <select id="sort-by">
+              <option value="Year">Year</option>
+              <option value="imdbRating">IMDB</option>
+              <<<<<<< Updated upstream <option value="runtime">IMDB</option>
+                =======
+                <option value="runtime">Runtime</option>
+                >>>>>>> Stashed changes
+            </select>
+            <div id="genre-container" class="dropdown-check-list" tabindex="100">
+              <span class="anchor">Genre</span>
+              <ul id="genre-checkbox-list" class="items">
+                <li><input value="Action" type="checkbox" />Action</li>
+                <li><input value="Comedy" type="checkbox" />Comedy</li>
+                <li><input value="Drama" type="checkbox" />Drama</li>
+                <li><input value="Fantasy" type="checkbox" />Fantasy</li>
+                <li><input value="Horror" type="checkbox" />Horror</li>
+                <li><input value="Romance" type="checkbox" />Romance</li>
+                <li><input value="Western" type="checkbox" />Western</li>
+                <li><input value="Sci-Fi" type="checkbox" />Sci-Fi</li>
+                <li><input value="Thriller" type="checkbox" />Thriller</li>
+              </ul>
+            </div>
+            <div id="rated-container" class="dropdown-check-list" tabindex="100">
+              <span class="anchor">Rating</span>
+              <ul id="rated-checkbox-list" class="items">
+                <li><input value="G" type="checkbox" />"G"</li>
+                <li><input value="PG" type="checkbox" />"PG"</li>
+                <li><input value="PG-13" type="checkbox" />"PG-13"</li>
+                <li><input value="R" type="checkbox" />"R"</li>
+                <li><input value="NR" type="checkbox" />"NR"</li>
+              </ul>
+            </div>
+            <section id="picked-movies-cont">
+            </section>
+          </aside>
+        </div>
+        <div class="column is-2">Queued movie results
+        </div>
+        <div class="column is-4">movie poster and info
+          <figure class="image is-128x128">
+            <img src="https://bulma.io/images/placeholders/256x256.png">
+          </figure>
+        </div> 
+        <div class="column is-4">Movie Review
+        </div>
+        
+        </div>
+      </div>
+    </div>
+    
+      
+
+
+
+
+          <!-- <div class="main">
+        <h1>Movie Generator</h1>
+       
         <button type="button">Random</button>
         <button type="button">Like</button>
         <button type="button">Dislike</button>
       </div> -->
-      </div>
-      <div class="column is-4">
-        movie review
-      </div>
+       
 
 
-
-    </div>
-  </div>
+     
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <script src="./assets/script/data-functions.js"></script>
-  <script src="./assets/script/rendering.js"></script>.
-  <script src="./assets/script/event-listeners.js"></script>
-  <script src="./assets/script/script.js"></script>
-  <script src="./assets/script/pull-search-values.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./assets/script/data-functions.js"></script>
+    <script src="./assets/script/rendering.js"></script>.
+    <script src="./assets/script/event-listeners.js"></script>
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/pull-search-values.js"></script> 
 </body>
 
 </html>
