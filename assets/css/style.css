@@ -1,16 +1,39 @@
 
+.hero-body{
+  background-color:#3d4b5f;
+  padding: 40px;
+  border-bottom: solid 3px #62809a;
+
+}
+.title{
+  font-size: 50px;
+}
+#title{
+    background-color: #bcc5c3  ;
+}
+.button{
+  background-color: #62809a ;
+}
+
 .movieGenerator{
   margin-bottom:5px;
-  border-bottom: black solid 3px;
+  border-bottom: #62809a solid 3px;
   padding: 10px;
   text-align: center;
   font-size:large;
 }
 
-.button {
-  border: solid black 2px;
-  align-items:center;
+body {
+  
+
 }
+
+
+/* .button {
+  border:black 2px;
+  border: dotted;
+  
+} */
 
 /* .dropdown-check-list {
     display: inline-block;
