@@ -13,6 +13,11 @@
 }
 .button{
   background-color: #62809a ;
+  color:white;
+}
+
+.sidenav{
+  margin: 5px;
 }
 
 .movieGenerator{
@@ -22,11 +27,11 @@
   text-align: center;
   font-size:large;
 }
-
+/* 
 body {
-  
+ background-color: #bdc1ae;
 
-}
+} */
 
 
 /* .button {

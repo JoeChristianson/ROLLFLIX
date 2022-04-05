@@ -12,7 +12,6 @@ const getRandomMovie = async ()=>{
     // this gets the random movie
     const rResp = await fetch("https://k2maan-moviehut.herokuapp.com/api/random");
     const rData = await rResp.json();
-    console.log(rData)
     movieTitle = rData.name.toLowerCase()
     movieTitle.replace(" ","_")
     // this gets more details about the movie
@@ -24,7 +23,6 @@ const getRandomMovie = async ()=>{
     }
     else {
         console.log(`${data.Title} has been randomly chosen and should be displayed`)
-    console.log(data);
     current = data;
     }
 }
@@ -33,7 +31,6 @@ const addMovieToPicks = ()=>{
     picks.push(current);
     localStorage.setItem("picks",JSON.stringify(picks));
     console.log(`${picks[picks.length-1].Title} has been added to the picks`)
-    console.log(picks);
     getRandomMovie();
 }
 
