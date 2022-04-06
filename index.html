@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Movie Generator</title>
@@ -71,41 +74,55 @@
             </section>
           </aside>
         </div>
-        <div class="column queuedMovie is-2" id="queuedMovie">Queued Movie Results:
+        <div class="column queuedMovie is-2">
+          <div id="queuedMovie">Queued Movie Results:</div>
         </div>
         <div class="column poster is-2 ">
           <!-- <div class="column is-1"> -->
-          <figure class="image is-128x128">
+          <figure class="image is-3by4">
             <img src="https://bulma.io/images/placeholders/128x128.png">
           </figure>
         </div>
-        <div class="column movieInfo is-3" id="movieInfo">Movie Info
+        <div class="column movieInfo is-3">
+          <div id="movieInfo">Movie Info:</div>
           <div class="card">
             <div class="card-content">
-              <div id="title">Hello</div>
-              <div id="year">hello</div>
-              <div id="rated">Hello</div>
-              <div id="genre">Hello</div>
-              <div id="runtime">Hello</div>
-              <div id="imdbRating">Hello</div>
-              <div id="plot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ducimus harum dicta,
-                laudantium excepturi, dolorem ipsam incidunt totam, sunt minus itaque? Quo incidunt ullam et? A maiores
-                eius dolorum quisquam.</div>
+              <div id="title"></div>id="movieInfo"
+              <div id="year"></div>
+              <div id="rated"></div>
+              <div id="genre"></div>
+              <div id="runtime"></div>
             </div>
           </div>
-        </div>
-        <div class="column movieReview is-3" id="movieReview">Movie Review:
+          <div>Ratings:</div>
           <div class="card">
             <div class="card-content">
-              <div id="movieReview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos modi magnam,
-                voluptate maiores earum aperiam obcaecati quia cumque recusandae minima placeat a sequi quisquam dolores
-                non repudiandae expedita cum quo?</div>
+
+              <div class="internetMovie"><span id ="internetMovie"></span></div>
+              <div class="rottenTomatoes"><span id="rottenTomatoes"></span></div>
+              <div class="metacritic"><span id="metacritic"></span></div>
+              <div class="imdbRating"><span id="imdbRating"></span></div>
+            </div>
+          </div>
+
+          <!-- <div id="plot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ducimus harum dicta,
+                laudantium excepturi, dolorem ipsam incidunt totam, sunt minus itaque? Quo incidunt ullam et? A maiores
+                eius dolorum quisquam.</div> -->
+
+        </div>
+
+        <div class="column movieReview is-3">
+          <div id="movieReview">Movie Plot: </div>
+          <div class="card">
+            <div class="card-content">
+              <div id="plot"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
 
