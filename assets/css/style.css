@@ -25,7 +25,7 @@
 
 .sidenav{
   margin-left: 5px;
-  background-color: #62809a59;
+  background-color: #33363833;
   color:black
 }
 #sort-by{
@@ -78,7 +78,7 @@
 }
 
 #imdbRating {
-  border-bottom: solid black;
+  
   padding-top: 5px;
 }
 .past-picks-buttons{
@@ -91,7 +91,7 @@
   font-weight: bold;
   font-size: 1.3rem;}
   .anchor{
-    font-size: 20px;
+    font-size: 25px;
     border-bottom: solid black;
   }
 #movieInfo{
@@ -101,5 +101,11 @@
   font-size: 30px;
 }
 #movieReview{
+  font-size: 30px;
+}
+.hide{
+  display: none;
+}
+.ratings{
   font-size: 30px;
 }
