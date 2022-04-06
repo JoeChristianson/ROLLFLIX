@@ -21,6 +21,19 @@
 
 .sidenav{
   margin-left: 5px;
+  background-color: #62809a59;
+  color:black
+}
+#sort-by{
+  
+  width: 150px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+ 
 }
 
 .movieGenerator{
