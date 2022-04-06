@@ -32,14 +32,10 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     let newPicks = []
     for(let genre of genres){
         const picksToAdd = filterMovies("Genre",genre,filteredPicks);
-        console.log("picks to add")
-        console.log(picksToAdd)
         newPicks.concat(picksToAdd)
         picksToAdd.forEach(pick=>{
             newPicks.push(pick)
         })
-        console.log("here are the new picks");
-        console.log(newPicks);
     }
     filteredPicks = [...newPicks];
     newPicks = [];
@@ -53,21 +49,28 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     filteredPicks = [...newPicks];
     sortMovies(sortProperty,descending,filteredPicks);
     const titles = []
-    for (let i = 0;i<(Math.min(filteredPicks.length,10));i++){
+    for (let i = 0;i<(Math.min(filteredPicks.length,100));i++){
         const btn = $("<button>")
         btn.text(filteredPicks[i].Title);
         if (!titles.includes(filteredPicks[i].Title)){
             picksContainer.append(btn);
             titles.push(filteredPicks[i].Title)
         }        
-        console.log(titles);
     }
 }
 
-async function renderNew(){
-    const movie = await getRandomMovie();
-
-    console.log(movie)
+async function renderNew(titleInput){
+    let movie;
+    if(titleInput==="random"){
+        movie = await getRandomMovie();
+    }
+    else{
+        for (let pick of picks){
+            if (pick.Title===titleInput){
+                movie=pick;
+            }
+        }
+    }
     title.text(movie.Title);
     year.text(movie.Year);
     rated.text(movie.Rated);
@@ -78,6 +81,3 @@ async function renderNew(){
     image.attr("src",movie.Poster)
 }
 
-function renderOld(title){
-
-}

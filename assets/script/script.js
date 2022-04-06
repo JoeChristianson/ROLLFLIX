@@ -22,4 +22,4 @@ const searchParams = {search:"",
                       sortProperty:"imdbRating",
                       descending:true};
 renderPicksSp(searchParams)
-renderNew()
+renderNew("random")
