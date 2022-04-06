@@ -11,6 +11,10 @@
 .title{
   font-size: 50px;
 }
+.columns{
+  font-family: 'fira sans';
+}
+
 #randomMovieGenerator{
     background-color: #bcc5c3  ;
 }
