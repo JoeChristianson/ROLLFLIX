@@ -3,9 +3,23 @@ const genreChecklist = $("#genre-checkbox-list");
 const ratedChecklist = $("#rated-checkbox-list");
 const sortBy = $("#sort-by");
 const pickedMovies = $("#picked-movies-cont")
+const thumbUp = $(".thumbUp");
+const randomMovie = $(".randomMovie");
+const thumbDown = $(".thumbDown")
 
-console.log(searchText)
+thumbUp.on("click",e=>{
+    addMovieToPicks();
+    pullVals();
+    renderNew();
+})
 
+thumbDown.on("click",e=>{
+    renderNew();
+})
+
+randomMovie.on("click",e=>{
+    renderNew();
+})
 
 searchText.on("keydown",(event)=>{
     pullVals()
@@ -27,3 +41,4 @@ sortBy.on("change",(event)=>{
 pickedMovies.on("click","button",(event)=>{
     console.log(event.target.innerText + "has been chosen");
 })
+
