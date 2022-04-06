@@ -4,7 +4,10 @@ const year = $("#year");
 const rated = $("#rated")
 const genres = $("#genre")
 const runtime = $("#runtime")
-const imdbRating = $("#imdbRating")
+const internetMovieRating = $("#internetMovie");
+const rottenTomatoesRating = $("#rottenTomatoes");
+const metacriticRating = $("#metacritic")
+const imdbRating = $("#imdbRating");
 const plot = $("#plot")
 // TO DO: image id
 const image = $("img")
@@ -52,6 +55,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     for (let i = 0;i<(Math.min(filteredPicks.length,100));i++){
         const btn = $("<button>")
         btn.text(filteredPicks[i].Title);
+        btn.addClass("past-picks-buttons");
         if (!titles.includes(filteredPicks[i].Title)){
             picksContainer.append(btn);
             titles.push(filteredPicks[i].Title)
@@ -79,5 +83,8 @@ async function renderNew(titleInput){
     imdbRating.text(movie.imdbRating)
     plot.text(movie.Plot)
     image.attr("src",movie.Poster)
+    // internetMovieRating.text(movie.)
+    metacriticRating.text(movie.Metascore+"%");
+    
 }
 
