@@ -52,6 +52,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     for (let i = 0;i<(Math.min(filteredPicks.length,100));i++){
         const btn = $("<button>")
         btn.text(filteredPicks[i].Title);
+        btn.addClass("past-picks-buttons");
         if (!titles.includes(filteredPicks[i].Title)){
             picksContainer.append(btn);
             titles.push(filteredPicks[i].Title)
