@@ -80,11 +80,10 @@ async function renderNew(titleInput){
     rated.text(movie.Rated);
     genres.text(movie.Genre);
     runtime.text(movie.Runtime);
-    imdbRating.text(movie.imdbRating)
+    imdbRating.text("IMBD:  " + movie.imdbRating)
     plot.text(movie.Plot)
     image.attr("src",movie.Poster)
     // internetMovieRating.text(movie.)
-    metacriticRating.text(movie.Metascore+"%");
-    
+    metacriticRating.text("Metascore:  " +movie.Metascore+"%");
+    rottenTomatoesRating.text("Rotten Tomatoes:  " + movie.Ratings.filter(rating=>rating.Source === "Rotten Tomatoes")[0]?.Value);
 }
-

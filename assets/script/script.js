@@ -7,19 +7,20 @@
 // }
 
 
-const fillDummyPicks = async ()=>{
-  await getRandomMovie();
-  addMovieToPicks();
-}
+// const fillDummyPicks = async ()=>{
+//   await getRandomMovie();
+//   addMovieToPicks();
+// }
 
-for (let i = picks.length;i<10;i++){
-  fillDummyPicks()
-}
+// for (let i = picks.length;i<10;i++){
+//   fillDummyPicks()
+// }
 
 const searchParams = {search:"",
-                      genres:["Crime","Comedy","Action"],
-                      ratings:["G","PG","R"],
-                      sortProperty:"imdbRating",
+                      genres:["Action","Comedy","Drama","Fantasy","Horror","Romance","Western","Sci-Fi","Thriller"],
+                      ratings:["G","PG","PG-13","R","NR"],
+                      sortProperty:"pickedDate",
                       descending:true};
-renderPicksSp(searchParams)
+// renderPicksSp(searchParams)
+pullVals()
 renderNew("random")

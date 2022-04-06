@@ -22,7 +22,11 @@ function pullVals() {
     searchObj.ratings = [];
     for (let j=0; j<ratingEls.length; j++){
         searchObj.ratings.push(ratingEls[j].value);
+        if(ratingEls[j].value === "NR"){
+            searchObj.ratings.push("Passed","N/A","Not Rated","Approved")
+        }
     }
+    console.log(searchObj);
     searchObj.descending = true;
     renderPicksSp(searchObj);
     console.log(searchObj);
