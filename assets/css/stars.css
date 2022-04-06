@@ -1,0 +1,17 @@
+.star-row{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.star{
+    color: #cacac1;
+    font-weight: bold;
+}
+
+.star:hover{
+    color: #d3d309;
+}
+
+.star:hover ~ .star{
+    color:#d3d309;
+}
