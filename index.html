@@ -15,7 +15,8 @@
 
 <body>
   <section class="hero is-link">
-    <div class="hero-body">
+    <div class="hero-body">  
+      <!-- <img class="gif" src="https://i.gifer.com/8V9H.gif" alt="funny GIF" > -->
       <p class="title">
         Movie Generator
       </p>
@@ -35,12 +36,13 @@
 
       <div class="columns">
         <div class="column is-2">
-          <aside class="sidenav">
+          <aside class="sidenav">Search Terms:
             <input class="input" type="text" placeholder="Text input">
-            <select id="sort-by">
+            <select id="sort-by">Sort By:
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
                 <option value="runtime">Runtime</option>
+                <option value="dateAdded">Date Added</option>
             </select>
             <div id="genre-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
@@ -70,12 +72,11 @@
         </div>
         <div class="column-queuedMovie-is-2">
           <div id="queuedMovie">Queued Movie Results:
-            <section id="picked-movies-cont" style='overflow:scroll;height:400px;'></section>
+            <section class="card" id="picked-movies-cont" style='overflow:auto; height:400px;'></section>
             </section>
           </div>
         </div>
         <div class="column poster is-2 ">
-          <!-- <div class="column is-1"> -->
           <figure class="image is-3by4">
             <img src="https://bulma.io/images/placeholders/128x128.png">
           </figure>
@@ -99,12 +100,7 @@
               <div class="imdbRating"><span id="imdbRating"></span></div>
             </div>
           </div>
-
-          <!-- <div id="plot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ducimus harum dicta,
-                laudantium excepturi, dolorem ipsam incidunt totam, sunt minus itaque? Quo incidunt ullam et? A maiores
-                eius dolorum quisquam.</div> -->
-
-        </div>
+         </div>
 
         <div class="column movieReview is-3">
           <div id="movieReview">Movie Plot: </div>
