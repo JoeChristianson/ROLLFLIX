@@ -40,11 +40,7 @@
             <select id="sort-by">
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
-              <!-- ask about what this is -->
-              <<<<<<< Updated upstream <option value="runtime">IMDB</option>
-                =======
                 <option value="runtime">Runtime</option>
-                >>>>>>> Stashed changes
             </select>
             <div id="genre-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
@@ -74,7 +70,7 @@
         </div>
         <div class="column-queuedMovie-is-2">
           <div id="queuedMovie">Queued Movie Results:
-            <section id="picked-movies-cont">
+            <section id="picked-movies-cont" style='overflow:scroll;height:400px;'></section>
             </section>
           </div>
         </div>
