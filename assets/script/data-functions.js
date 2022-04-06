@@ -1,7 +1,8 @@
 const APIkey = "72f4250f";
 const baseURL = `https://www.omdbapi.com/?apikey=${APIkey}&type=movie&t=`;
 // picks are the movies that have been saved
-const picks = JSON.parse(localStorage.getItem("picks")) || [];
+let picks = JSON.parse(localStorage.getItem("picks")) || [];
+let watched = JSON.parse(localStorage.getItem("watched")) || [];
 // this is the currently displayed movie object
 let current = null;
 const a = [4,2,1]
@@ -70,4 +71,11 @@ const fullSearch = string=>{
         return fullText(pick).includes(string);
     })
     return (filteredPicks)    
+}
+
+const removeMovie=(title)=>{
+    console.log(title)
+    picks = picks.filter(pick=>pick.Title != title);
+    localStorage.setItem("picks",JSON.stringify(picks))
+    return picks;
 }
