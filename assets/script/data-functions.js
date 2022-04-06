@@ -23,6 +23,7 @@ const getRandomMovie = async ()=>{
     }
     else {
     current = data;
+    current.Runtime = current.Runtime.split(" ")[0]
     }
     return current;
 }

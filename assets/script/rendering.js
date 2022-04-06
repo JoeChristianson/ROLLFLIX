@@ -70,7 +70,8 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
         btn.addClass("past-picks-buttons");
         if (!titles.includes(filteredPicks[i].Title)){
             picksContainer.append(btn);
-            titles.push(filteredPicks[i].Title)
+            titles.push(filteredPicks[i].Title);
+            console.log(filteredPicks[i].pickedDate)
         }        
     }
 }
@@ -94,7 +95,7 @@ async function renderNew(titleInput){
     year.text(movie.Year);
     rated.text(movie.Rated);
     genres.text(movie.Genre);
-    runtime.text(movie.Runtime);
+    runtime.text(movie.Runtime+" min");
     imdbRating.text("IMBD:  " + movie.imdbRating)
     plot.text(movie.Plot)
     image.attr("src",movie.Poster)

@@ -4,6 +4,7 @@ function pullVals() {
     var ratingEls = document.querySelectorAll("#rated-checkbox-list input:checked");
     var searchEl = document.querySelector("input");
     var sortEl = document.querySelector("select");
+    var directionEl = document.querySelector("#direction")
     
     // console.log(genreEls);
     // console.log(ratingEls);
@@ -23,11 +24,12 @@ function pullVals() {
     for (let j=0; j<ratingEls.length; j++){
         searchObj.ratings.push(ratingEls[j].value);
         if(ratingEls[j].value === "NR"){
-            searchObj.ratings.push("Passed","N/A","Not Rated","Approved")
+            searchObj.ratings.push("Passed","N/A","Not Rated","Approved","TV-PG")
         }
     }
     console.log(searchObj);
-    searchObj.descending = true;
+    var direction = directionButton.data("direction")
+    searchObj.descending = (direction==="descending")?true:false;
     renderPicksSp(searchObj);
     console.log(searchObj);
 }

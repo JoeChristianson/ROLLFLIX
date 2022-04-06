@@ -6,6 +6,7 @@ const pickedMovies = $("#picked-movies-cont")
 const thumbUp = $(".thumbUp");
 const randomMovie = $(".randomMovie");
 const thumbDown = $(".thumbDown")
+const directionButton = $("#direction");
 
 thumbUp.on("click",e=>{
     addMovieToPicks();
@@ -50,4 +51,16 @@ body.on("click",".star",e=>{
     localStorage.setItem("watched",JSON.stringify(watched))
     pullVals();
     renderNew("random");
+})
+
+directionButton.on("click",e=>{
+    if(directionButton.data("direction")==="descending"){
+        directionButton.data("direction","ascending");
+        directionButton.text("^")
+    }
+    else{
+        directionButton.data("direction","descending");
+        directionButton.text("v")
+    }
+    pullVals()
 })

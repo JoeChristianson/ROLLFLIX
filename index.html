@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/stars.css">
   <title>Movie Generator</title>
 </head>
 
@@ -38,10 +39,12 @@
           <aside class="sidenav">
             <input class="input" type="text" placeholder="Text input">
             <select id="sort-by">
+              <option value="pickedDate">Last Picked</option>
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
-                <option value="runtime">Runtime</option>
+                <option value="Runtime">Runtime</option>
             </select>
+            <button id="direction" data-direction="descending">v</button>
             <div id="genre-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
               <ul id="genre-checkbox-list" class="items">

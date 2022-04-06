@@ -18,9 +18,9 @@
 
 const searchParams = {search:"",
                       genres:["Action","Comedy","Drama","Fantasy","Horror","Romance","Western","Sci-Fi","Thriller"],
-                      ratings:["G","PG","PG-13","R","NR"],
+                      ratings:["G","PG","PG-13","R","NR","Passed","N/A","NA","Not Rated","Approved","TV-PG"],
                       sortProperty:"pickedDate",
                       descending:true};
 // renderPicksSp(searchParams)
-pullVals()
+renderPicksSp(searchParams);
 renderNew("random")
