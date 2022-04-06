@@ -11,6 +11,10 @@
 .title{
   font-size: 50px;
 }
+.columns{
+  font-family: 'fira sans';
+}
+
 #randomMovieGenerator{
     background-color: #bcc5c3  ;
 }
@@ -21,6 +25,19 @@
 
 .sidenav{
   margin-left: 5px;
+  background-color: #62809a59;
+  color:black
+}
+#sort-by{
+  
+  width: 150px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+ 
 }
 
 .movieGenerator{
@@ -64,6 +81,15 @@
   border-bottom: solid black;
   padding-top: 5px;
 }
+.past-picks-buttons{
+  width: 100%;
+  padding: 5px;
+  background-color: #3d4b5f;
+  color: white;
+  margin-bottom: 10px;
+  border: #62809a 2px solid;
+  font-weight: bold;
+  font-size: 1.3rem;}
 /* 
 body {
  background-color: #bdc1ae;
