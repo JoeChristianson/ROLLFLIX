@@ -10,15 +10,15 @@ const thumbDown = $(".thumbDown")
 thumbUp.on("click",e=>{
     addMovieToPicks();
     pullVals();
-    renderNew();
+    renderNew("random");
 })
 
 thumbDown.on("click",e=>{
-    renderNew();
+    renderNew("random");
 })
 
 randomMovie.on("click",e=>{
-    renderNew();
+    renderNew("random");
 })
 
 searchText.on("keydown",(event)=>{
@@ -39,6 +39,5 @@ sortBy.on("change",(event)=>{
 
 
 pickedMovies.on("click","button",(event)=>{
-    console.log(event.target.innerText + "has been chosen");
+    renderNew(event.target.textContent);
 })
-
