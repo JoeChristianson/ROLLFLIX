@@ -27,6 +27,7 @@ const getRandomMovie = async ()=>{
 }
 
 const addMovieToPicks = ()=>{
+    current.pickedDate = new Date().getTime();
     picks.push(current);
     localStorage.setItem("picks",JSON.stringify(picks));
     getRandomMovie();
