@@ -41,3 +41,13 @@ sortBy.on("change",(event)=>{
 pickedMovies.on("click","button",(event)=>{
     renderNew(event.target.textContent);
 })
+
+body.on("click",".star",e=>{
+    const rating = e.target.dataset.rating;
+    console.log(rating)
+    removeMovie(current.Title);
+    watched.push({current,rating});
+    localStorage.setItem("watched",JSON.stringify(watched))
+    pullVals();
+    renderNew("random");
+})

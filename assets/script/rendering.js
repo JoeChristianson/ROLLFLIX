@@ -11,6 +11,18 @@ const imdbRating = $("#imdbRating");
 const plot = $("#plot")
 // TO DO: image id
 const image = $("img")
+const body =$("body")
+
+const stars = `
+    <div id="star-rating-container"><h4>Stars</h4></div>
+    <h4 class="star-row" >
+    <span data-rating="5" class="star">&#9733;</span>
+    <span data-rating="4" class="star">&#9733;</span>
+    <span data-rating="3" class="star">&#9733;</span>
+    <span data-rating="2" class="star">&#9733;</span>
+    <span data-rating="1" class="star">&#9733;</span>
+    </h4>
+`
 
 const renderPicks = ({search,genre,rated,sortProperty,descending})=>{
     picksContainer.html("")
@@ -65,6 +77,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
 
 async function renderNew(titleInput){
     let movie;
+    let old;
     if(titleInput==="random"){
         movie = await getRandomMovie();
     }
@@ -72,9 +85,11 @@ async function renderNew(titleInput){
         for (let pick of picks){
             if (pick.Title===titleInput){
                 movie=pick;
+                old="true";
             }
         }
     }
+    current=movie;
     title.text(movie.Title);
     year.text(movie.Year);
     rated.text(movie.Rated);
@@ -86,4 +101,22 @@ async function renderNew(titleInput){
     // internetMovieRating.text(movie.)
     metacriticRating.text("Metascore:  " +movie.Metascore+"%");
     rottenTomatoesRating.text("Rotten Tomatoes:  " + movie.Ratings.filter(rating=>rating.Source === "Rotten Tomatoes")[0]?.Value);
+    if (old){
+        let watchedBtn = $("<button>");
+        watchedBtn.text("Watched?")
+        watchedBtn.on("click",e=>{
+            const ratingsOpen = $("<div>")
+            ratingsOpen.html(stars);
+            title.append(ratingsOpen);
+            // removeMovie(movie.Title);
+            // watched.push(movie);
+            // localStorage.setItem("watched",JSON.stringify(watched))
+            // pullVals();
+            // renderNew("random");
+            
+        })
+        watchedBtn.addClass("watched-button")
+        title.append(watchedBtn)
+    }
 }
+
