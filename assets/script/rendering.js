@@ -15,7 +15,7 @@ const cast = $("#cast")
 // TO DO: image id
 const image = $("img")
 const body =$("body")
-const watched = $("#watched-list-cont")
+const watchedEl = $("#watched-list-cont")
 
 const stars = `
     <div id="star-rating-container"><h4>Stars</h4></div>
@@ -134,7 +134,7 @@ const fillWatched = ()=>{
     watched.forEach(movie=>{
         const watchedLine = $("<div>")
         watchedLine.addClass("watched-line");
-        
+
 
     })
 }
