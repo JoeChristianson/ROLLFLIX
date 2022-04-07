@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Kanit:wght@100&family=Limelight&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/2a5ab65e4d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/stars.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
@@ -22,7 +24,7 @@
   <section class="hero is-link">
     <div class="hero-body">
       <p class="title">
-        Movie Generator
+        Movie Generator &#127871
       </p>
     </div>
   </section>
@@ -37,7 +39,7 @@
         <button class="button thumbDown is-large">&#128078
         </button>
         <br>
-        <button class=" button is-small js-modal-trigger" data-target="modal-js-example">
+        <button class=" button is-normal js-modal-trigger" data-target="modal-js-example">
           Click for Watched Movies
         </button>
       </p>
@@ -46,8 +48,8 @@
           <aside class="sidenav">
             <input class="input" type="text" placeholder="Text input">
             <!-- sort by dropdown menu -->
-            <select id="sort-by">
-              <option value="pickedDate">Sort by:</option>
+            <select id="sort-by">          
+              <option value="pickedDate">Sort by:   &#9660 </option>
               <option value="pickedDate">Last Picked</option>
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
@@ -60,25 +62,25 @@
             class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
               <ul id="genre-checkbox-list" class="items">
-                <li><input checked value="Action" type="checkbox" />Action</li>
-                <li><input checked value="Comedy" type="checkbox" />Comedy</li>
-                <li><input checked value="Drama" type="checkbox" />Drama</li>
-                <li><input checked value="Fantasy" type="checkbox" />Fantasy</li>
-                <li><input checked value="Horror" type="checkbox" />Horror</li>
-                <li><input checked value="Romance" type="checkbox" />Romance</li>
-                <li><input checked value="Western" type="checkbox" />Western</li>
-                <li><input checked value="Sci-Fi" type="checkbox" />Sci-Fi</li>
-                <li><input checked value="Thriller" type="checkbox" />Thriller</li>
+                <li><input checked value="Action" type="checkbox" />  Action</li>
+                <li><input checked value="Comedy" type="checkbox" />  Comedy</li>
+                <li><input checked value="Drama" type="checkbox" />  Drama</li>
+                <li><input checked value="Fantasy" type="checkbox" />  Fantasy</li>
+                <li><input checked value="Horror" type="checkbox" />  Horror</li>
+                <li><input checked value="Romance" type="checkbox" />   Romance</li>
+                <li><input checked value="Western" type="checkbox" />  Western</li>
+                <li><input checked value="Sci-Fi" type="checkbox" />  Sci-Fi</li>
+                <li><input checked value="Thriller" type="checkbox" />  Thriller</li>
               </ul>
             </div>
             <div id="rated-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Rating</span>
               <ul id="rated-checkbox-list" class="items">
-                <li><input checked value="G" type="checkbox" />"G"</li>
-                <li><input checked value="PG" type="checkbox" />"PG"</li>
-                <li><input checked value="PG-13" type="checkbox" />"PG-13"</li>
-                <li><input checked value="R" type="checkbox" />"R"</li>
-                <li><input checked value="NR" type="checkbox" />"NR"</li>
+                <li><input checked value="G" type="checkbox" />  "G"</li>
+                <li><input checked value="PG" type="checkbox" />  "PG"</li>
+                <li><input checked value="PG-13" type="checkbox" />  "PG-13"</li>
+                <li><input checked value="R" type="checkbox" />  "R"</li>
+                <li><input checked value="NR" type="checkbox" />  "NR"</li>
               </ul>
             </div>
           </aside>
@@ -97,10 +99,10 @@
           </figure>
         </div>
         <!-- movie info and rating columns -->
-        <div class="column movieInfo is-3">
+        <div class="column movieInfo">
           <div id="movieInfo">Movie Info:</div>
           <div class="card">
-            <div class="card-content">
+            <div class="card-content Information">
               <div id="title"></div>
               <div id="year"></div>
               <div id="rated"></div>
@@ -110,15 +112,16 @@
           </div>
           <div class="ratings"> Ratings:</div>
           <div class="card">
-            <div class="card-content">
-              <div class="rottenTomatoes"><span id="rottenTomatoes"></span></div>
-              <div class="metacritic"><span id="metacritic"></span></div>
-              <div class="imdbRating"><span id="imdbRating"></span></div>
+            <div class="card-content ratingScores">
+              <div class="rottenTomatoes">&#127813      <span id="rottenTomatoes"></span></div>
+              <div class="metacritic"> <i style="border:rgb(209, 179, 6) solid 2px; background-color:rgb(17, 17, 68); color:white; border-radius: 2px;" class="fa-solid fa-m fas fa-border fa-large	
+                ">       </i><span id="metacritic"></span></div>
+              <div class="imdbRating"><i style= "color:rgb(255, 222, 32);" class="fa-brands fa-imdb fa-xl"></i>  <span id="imdbRating"></span></div>
             </div>
           </div>
         </div>
         <!-- Movie plot and credits column -->
-        <div class="column movieReview is-3">
+        <div class="column movieReview ">
           <div id="movieReview">Movie Plot: </div>
           <div class="card">
             <div class="card-content">
@@ -127,7 +130,7 @@
           </div>
           <div id="movieReview">Credits: </div>
           <div class="card">
-            <div class="card-content">
+            <div class="card-content movieCredits">
               <p>Director: <span id="director"></span></p>
               <p>Writer(s): <span id="writer"></span></p>
               <p>Cast: <span id="cast"></span></p>
@@ -137,6 +140,7 @@
       </div>
     </div>
   </div>
+  <footer class="footer"></footer>
 <!-- modal -->
   <div id="modal-js-example" class="modal">
     <div class="modal-background"></div>
