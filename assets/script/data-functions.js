@@ -31,26 +31,6 @@ const getRandomMovie = async () => {
 };
 
 
-const getRandomMovie = async ()=>{
-    // this gets the random movie
-    const rResp = await fetch("https://k2maan-moviehut.herokuapp.com/api/random");
-    const rData = await rResp.json();
-    console.log(rData);
-    movieTitle = rData.name.toLowerCase()
-    movieTitle.replace(" ","_")
-    // this gets more details about the movie
-    const response = await fetch(baseURL+movieTitle)
-    const data = await response.json();
-    console.log(data)
-    if(!data.Title){
-        await getRandomMovie()
-    }
-    else {
-    current = data;
-    current.Runtime = parseInt(current.Runtime.split(" ")[0])
-    }
-    return current;
-}
 // uses "current" object from getRandomMovie()
 // and adds that movie to the queue list
 const addMovieToPicks = ()=>{
