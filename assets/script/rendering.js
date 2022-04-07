@@ -12,11 +12,12 @@ const plot = $("#plot")
 const director =$("#director");
 const writer = $("#writer")
 const cast = $("#cast")
-// TO DO: image id
 const image = $("img")
 const body =$("body")
 const watchedEl = $("#watched-movies-cont")
 
+
+// After a movie has been selected from the queue list, AND user clicks "watched?" button
 const stars = `
     <div id="star-rating-container"><h4>Stars</h4></div>
     <h4 class="star-row" >
@@ -28,23 +29,7 @@ const stars = `
     </h4>
 `
 
-const renderPicks = ({search,genre,rated,sortProperty,descending})=>{
-    picksContainer.html("")
-    let filteredPicks = fullSearch(search)
-    if (genre!="All Genres"){
-        filteredPicks = filterMovies("Genre",genre,filteredPicks);
-    }
-    if (rated!="All Ratings"){
-        filteredPicks = strictFilterMovies("Rated",rated,filteredPicks)
-    }
-    sortMovies(sortProperty,descending,filteredPicks);
-    for (let i = 0;i<(Math.min(filteredPicks.length,10));i++){
-        const btn = $("<button>")
-        btn.text(filteredPicks[i].Title);
-        picksContainer.append(btn);
-    }
-}
-
+// Used for making the queue list (also taking in user's input from sidebar)
 const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     picksContainer.html("")
     let filteredPicks = fullSearch(search);
@@ -80,6 +65,7 @@ const renderPicksSp = ({search,genres,ratings,sortProperty,descending})=>{
     }
 }
 
+// Filling in the random/selected movie's data
 async function renderNew(titleInput){
     let movie;
     let old;
@@ -108,7 +94,6 @@ async function renderNew(titleInput){
 
 
     image.attr("src",movie.Poster)
-    // internetMovieRating.text(movie.)
     metacriticRating.text("Metascore:  " +movie.Metascore+"%");
     rottenTomatoesRating.text("Rotten Tomatoes:  " + movie.Ratings.filter(rating=>rating.Source === "Rotten Tomatoes")[0]?.Value);
     if (old){
@@ -118,11 +103,6 @@ async function renderNew(titleInput){
             const ratingsOpen = $("<div>")
             ratingsOpen.html(stars);
             title.append(ratingsOpen);
-            // removeMovie(movie.Title);
-            // watched.push(movie);
-            // localStorage.setItem("watched",JSON.stringify(watched))
-            // pullVals();
-            // renderNew("random");
             
         })
         watchedBtn.addClass("watched-button")
@@ -130,6 +110,7 @@ async function renderNew(titleInput){
     }
 }
 
+// fills in modal's list of watched movies
 const fillWatched = ()=>{
     watchedEl.html("")
     watched.forEach(movie=>{

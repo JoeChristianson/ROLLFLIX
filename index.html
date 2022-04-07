@@ -29,11 +29,11 @@
 
   <div class="columns">
     <div class="column">
+      <!-- Movie generator buttons -->
       <p class="movieGenerator" id="randomMovieGenerator">
         <button class="button thumbUp is-large"> &#128077
         </button>
         <button class="button is randomMovie is-large">Random Movie</button>
-
         <button class="button thumbDown is-large">&#128078
         </button>
         <br>
@@ -41,22 +41,23 @@
           Click for Watched Movies
         </button>
       </p>
-
       <div class="columns">
         <div class="column is-2">
-
           <aside class="sidenav">
             <input class="input" type="text" placeholder="Text input">
+            <!-- sort by dropdown menu -->
             <select id="sort-by">
               <option value="pickedDate">Sort by:</option>
               <option value="pickedDate">Last Picked</option>
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
               <option value="Runtime">Runtime</option>
-
             </select>
+            <!-- button to change queued section high/low depending on year -->
             <button id="direction" data-direction="descending">High to Low</button>
-            <div id="genre-container" class="dropdown-check-list" tabindex="100">
+            <!-- checked/unchecked buttons for sorting queued -->
+            <div id="genre-container" 
+            class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
               <ul id="genre-checkbox-list" class="items">
                 <li><input checked value="Action" type="checkbox" />Action</li>
@@ -82,17 +83,20 @@
             </div>
           </aside>
         </div>
-        <div class="column-queuedMovie-is-2">
+        <!-- queued movie column -->
+        <div class="column queuedMovie is-2">
           <div id="queuedMovie">Queue:
             <section class="card" id="picked-movies-cont"></section>
             </section>
           </div>
         </div>
+        <!-- movie poster column -->
         <div class="column poster is-2 ">
           <figure class="image is-3by4">
             <img src="https://bulma.io/images/placeholders/128x128.png">
           </figure>
         </div>
+        <!-- movie info and rating columns -->
         <div class="column movieInfo is-3">
           <div id="movieInfo">Movie Info:</div>
           <div class="card">
@@ -113,7 +117,7 @@
             </div>
           </div>
         </div>
-
+        <!-- Movie plot and credits column -->
         <div class="column movieReview is-3">
           <div id="movieReview">Movie Plot: </div>
           <div class="card">
@@ -133,7 +137,7 @@
       </div>
     </div>
   </div>
-
+<!-- modal -->
   <div id="modal-js-example" class="modal">
     <div class="modal-background"></div>
 
