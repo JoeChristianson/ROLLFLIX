@@ -16,8 +16,13 @@
   font-family: 'fira sans';
 }
 
+#sort-by{
+  border-radius: 3px;
+  padding:3px;
+}
+
 #randomMovieGenerator{
-    background-color: #acb6b4 ;
+    background-color: #adb9c4 ;
 }
 .button{
   background-color: #62809a ;
@@ -26,11 +31,12 @@
 
 .sidenav{
   margin-left: 7px;
-  background-color: #acb6b4;
+  background-color: #c0cdd8;
   color:black;
   padding:7px;
   font-family: 'fira sans';
   border: #62809a solid 1px;
+  border-radius:4px;
 }
 
 input {
@@ -45,7 +51,6 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
- 
 }
 
 .movieGenerator{
@@ -54,6 +59,11 @@ input {
   padding: 10px;
   text-align: center;
   font-size:large;
+}
+
+#queuedMovie {
+  padding: 0.75rem;
+  font-size: 15px;
 }
 
 .poster {
@@ -69,9 +79,21 @@ input {
   font-size: 1.2rem;
   box-shadow: 1px 1px 4px grey;
 }
+
 .watched-button:hover{
   background-color: #729bbe;
 }
+
+.movieInfo
+ {
+  background-color: #f0f5fa;
+  margin:10px;
+}
+.movieReview{
+  background-color: #f0f5fa;
+  margin:10px;
+}
+
 #title {
   border-bottom: solid black;
   font-size: 30px;
@@ -98,7 +120,6 @@ input {
 }
 
 #imdbRating {
-  
   padding-top: 5px;
 }
 
@@ -110,23 +131,30 @@ input {
   margin-bottom: 10px;
   border: #62809a 2px solid;
   font-weight: bold;
-  font-size: 1.3rem;}
-  .anchor{
+  font-size: 1.3rem;
+}
+
+.anchor{
     font-size: 25px;
     border-bottom: solid black;
   }
+
 #movieInfo{
   font-size: 30px;
 }
+
 #queuedMovie{
   font-size: 30px;
 }
+
 #movieReview{
   font-size: 30px;
 }
+
 .hide{
   display: none;
 }
+
 .ratings{
   font-size: 30px;
 }
