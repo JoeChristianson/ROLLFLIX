@@ -15,7 +15,7 @@ const cast = $("#cast")
 // TO DO: image id
 const image = $("img")
 const body =$("body")
-const watchedEl = $("#watched-list-cont")
+const watchedEl = $("#watched-movies-cont")
 
 const stars = `
     <div id="star-rating-container"><h4>Stars</h4></div>
@@ -131,10 +131,22 @@ async function renderNew(titleInput){
 }
 
 const fillWatched = ()=>{
+    watchedEl.html("")
     watched.forEach(movie=>{
+        console.log(movie)
+        let starLine = "";
+        for(let i = 0;i<movie.rating;i++){
+            starLine+="&#9733;"
+        }
         const watchedLine = $("<div>")
         watchedLine.addClass("watched-line");
+        watchedLine.html(`<div>${movie.current.Title}</div><div class="yellow">${starLine}</div>`)
+        watchedEl.append(watchedLine);
 
+
+
+        // display: flex;
+        // justify-content: space-around;
 
     })
 }
