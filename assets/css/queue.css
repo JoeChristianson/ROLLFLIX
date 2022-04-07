@@ -1,0 +1,11 @@
+.past-picks-buttons{
+    font-size: 0.8rem;
+    margin:0;
+}
+
+.column-queuedMovie-is-2{
+    height: 0 !important;
+}
+#picked-movies-cont{
+    height: auto !important;
+}
