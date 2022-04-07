@@ -51,6 +51,7 @@ body.on("click",".star",e=>{
     localStorage.setItem("watched",JSON.stringify(watched))
     pullVals();
     renderNew("random");
+    fillWatched()
 })
 
 directionButton.on("click",e=>{

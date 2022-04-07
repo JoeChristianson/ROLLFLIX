@@ -24,3 +24,5 @@ const searchParams = {search:"",
 // renderPicksSp(searchParams)
 renderPicksSp(searchParams);
 renderNew("random")
+
+fillWatched()
