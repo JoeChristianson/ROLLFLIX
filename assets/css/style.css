@@ -172,3 +172,6 @@ input {
 .ratings{
   font-size: 30px;
 }
+body {
+  background-color: rgb(212, 212, 212);
+}
