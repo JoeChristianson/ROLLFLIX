@@ -9,9 +9,10 @@
 }
 
 .star:hover{
-    color: #d3d309;
+    color: #fcf80b;
+    cursor:pointer;
 }
 
 .star:hover ~ .star{
-    color:#d3d309;
+    color:#fcf80b;
 }
