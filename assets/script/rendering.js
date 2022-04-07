@@ -143,10 +143,5 @@ const fillWatched = ()=>{
         watchedLine.html(`<div>${movie.current.Title}</div><div class="yellow">${starLine}</div>`)
         watchedEl.append(watchedLine);
 
-
-
-        // display: flex;
-        // justify-content: space-around;
-
     })
 }

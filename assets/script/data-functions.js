@@ -13,17 +13,19 @@ const getRandomMovie = async ()=>{
     // this gets the random movie
     const rResp = await fetch("https://k2maan-moviehut.herokuapp.com/api/random");
     const rData = await rResp.json();
+    console.log(rData);
     movieTitle = rData.name.toLowerCase()
     movieTitle.replace(" ","_")
     // this gets more details about the movie
     const response = await fetch(baseURL+movieTitle)
     const data = await response.json();
+    console.log(data)
     if(!data.Title){
         await getRandomMovie()
     }
     else {
     current = data;
-    current.Runtime = current.Runtime.split(" ")[0]
+    current.Runtime = parseInt(current.Runtime.split(" ")[0])
     }
     return current;
 }
@@ -62,14 +64,17 @@ function strictFilterMovies(property,string,array){
 const fullText = (obj)=>{
     let text = ""
     for (let prop in obj){
-        text+=obj[prop];
+        let newtext = obj[prop];
+         newtext =JSON.stringify(newtext);
+        console.log(newtext);
+        text+=newtext.toLowerCase();
     }
     return text;
 }
 
 const fullSearch = string=>{
     const filteredPicks = picks.filter((pick)=>{
-        return fullText(pick).includes(string);
+        return fullText(pick).includes(string.toLowerCase());
     })
     return (filteredPicks)    
 }
