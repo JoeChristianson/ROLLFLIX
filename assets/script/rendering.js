@@ -9,6 +9,9 @@ const rottenTomatoesRating = $("#rottenTomatoes");
 const metacriticRating = $("#metacritic")
 const imdbRating = $("#imdbRating");
 const plot = $("#plot")
+const director =$("#director");
+const writer = $("#writer")
+const cast = $("#cast")
 // TO DO: image id
 const image = $("img")
 const body =$("body")
@@ -98,6 +101,11 @@ async function renderNew(titleInput){
     runtime.text(movie.Runtime+" min");
     imdbRating.text("IMBD:  " + movie.imdbRating)
     plot.text(movie.Plot)
+    director.text(movie.Director);
+    writer.text(movie.Writer);
+    cast.text(movie.Actors)
+
+
     image.attr("src",movie.Poster)
     // internetMovieRating.text(movie.)
     metacriticRating.text("Metascore:  " +movie.Metascore+"%");

@@ -49,7 +49,7 @@
                 <option value="Runtime">Runtime</option>
 
             </select>
-            <button id="direction" data-direction="descending">v</button>
+            <button id="direction" data-direction="descending">High to Low</button>
             <div id="genre-container" class="dropdown-check-list" tabindex="100">
               <span class="anchor">Genre</span>
               <ul id="genre-checkbox-list" class="items">
@@ -77,8 +77,8 @@
           </aside>
         </div>
         <div class="column-queuedMovie-is-2">
-          <div id="queuedMovie">Queued Movie Results:
-            <section class="card" id="picked-movies-cont" style='overflow:auto; height:400px;'></section>
+          <div id="queuedMovie">Queue:
+            <section class="card" id="picked-movies-cont"></section>
             </section>
           </div>
         </div>
@@ -113,6 +113,14 @@
           <div class="card">
             <div class="card-content">
               <div id="plot"></div>
+            </div>
+          </div>     
+          <div id="movieReview">Credits: </div>     
+          <div class="card">
+            <div class="card-content">
+              <p>Director: <span id="director"></span></p>
+              <p>Writer(s): <span id="writer"></span></p>
+              <p>Cast: <span id="cast"></span></p>
             </div>
           </div>
         </div>

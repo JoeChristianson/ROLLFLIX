@@ -56,11 +56,11 @@ body.on("click",".star",e=>{
 directionButton.on("click",e=>{
     if(directionButton.data("direction")==="descending"){
         directionButton.data("direction","ascending");
-        directionButton.text("^")
+        directionButton.text("Low to High")
     }
     else{
         directionButton.data("direction","descending");
-        directionButton.text("v")
+        directionButton.text("High to Low")
     }
     pullVals()
 })
