@@ -1,6 +1,7 @@
-/* .column {
-  border: black solid;
-} */
+
+body {
+  background-color: #3d4b5f
+}
 
 .hero-body{
   background-color:#3d4b5f;
@@ -19,14 +20,41 @@
 #sort-by{
   border-radius: 3px;
   padding:3px;
+  margin-bottom:3px;
+  border-radius: 3px;
+  padding:3px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  align-items: center;
 }
+#direction{
+  border: none;
+    background-color: white;
+    margin: 0;
+    padding: 7px;
+    border: 1px;
+    font-size: 16px;
+    border-radius: 2px;
+} 
 
 #randomMovieGenerator{
     background-color: #adb9c4 ;
 }
+
 .button{
   background-color: #62809a ;
   color:white;
+}
+
+.js-modal-trigger{
+  background-color: #3d4b5f ;
+  color:white;
+  margin-top:3px;
+  font-size:10px;
 }
 
 .sidenav{
@@ -43,14 +71,7 @@ input {
  margin-bottom: 3px;
 }
 
-#sort-by{
-  font-size: 18px;
-  border: 1px solid #CCC;
-  height: 34px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+
 
 #picked-movies-cont{
   overflow: auto;
@@ -58,14 +79,6 @@ input {
   padding: 10px;
 }
 
-#direction{
-  border: none;
-    background-color: white;
-    margin: 0;
-    padding: 3px;
-    border: 1px;
-    font-size: 18px;
-}
 
 .movieGenerator{
   margin-bottom:5px;
@@ -78,12 +91,17 @@ input {
 #queuedMovie {
   padding: 0.75rem;
   font-size: 15px;
+  background: #f0f5fa;
+  margin:10px;
 }
 
 .poster {
   padding-top: 50px;
 }
 
+img{
+  border:white solid 5px;
+}
 .watched-button{
   display: block;
   margin-bottom: 10px;
