@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="./assets/css/stars.css">
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet" href="./assets/css/modal.css">
 
   <title>Movie Generator</title>
 </head>
 
 <body>
   <section class="hero is-link">
-    <div class="hero-body">  
-      <!-- <img class="gif" src="https://daisyspiveyyr1.files.wordpress.com/2013/02/header-2.jpg" alt="funny GIF" > -->
+    <div class="hero-body">
       <p class="title">
         Movie Generator
       </p>
@@ -31,12 +31,13 @@
       <p class="movieGenerator" id="randomMovieGenerator">
         <button class="button thumbUp is-large"> &#128077
         </button>
-        <button class="button randomMovie is-large">Random Movie</button>
+        <button class="button is randomMovie is-large">Random Movie</button>
 
         <button class="button thumbDown is-large">&#128078
         </button>
-        <button class="js-modal-trigger" data-target="modal-js-example">
-          Open JS example modal
+        <br>
+        <button class=" button is-small js-modal-trigger" data-target="modal-js-example">
+          Click for Watched Movies
         </button>
       </p>
 
@@ -46,11 +47,11 @@
           <aside class="sidenav">
             <input class="input" type="text" placeholder="Text input">
             <select id="sort-by">
-                            <option value="pickedDate">Sort by:</option>
+              <option value="pickedDate">Sort by:</option>
               <option value="pickedDate">Last Picked</option>
               <option value="Year">Year</option>
               <option value="imdbRating">IMDB</option>
-                <option value="Runtime">Runtime</option>
+              <option value="Runtime">Runtime</option>
 
             </select>
             <button id="direction" data-direction="descending">High to Low</button>
@@ -110,7 +111,7 @@
               <div class="imdbRating"><span id="imdbRating"></span></div>
             </div>
           </div>
-         </div>
+        </div>
 
         <div class="column movieReview is-3">
           <div id="movieReview">Movie Plot: </div>
@@ -118,8 +119,8 @@
             <div class="card-content">
               <div id="plot"></div>
             </div>
-          </div>     
-          <div id="movieReview">Credits: </div>     
+          </div>
+          <div id="movieReview">Credits: </div>
           <div class="card">
             <div class="card-content">
               <p>Director: <span id="director"></span></p>
@@ -134,12 +135,11 @@
 
   <div id="modal-js-example" class="modal">
     <div class="modal-background"></div>
-  
+
     <div class="modal-content">
       <div class="box">
         <h3>Watched Movies</h3>
         <div id="watched-movies-cont"></div>
-        <!-- Your content -->
       </div>
     </div>
 
@@ -148,7 +148,7 @@
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   <script src="./assets/script/modal.js"></script>
   <script src="./assets/script/pull-search-values.js"></script>
   <script src="./assets/script/data-functions.js"></script>
