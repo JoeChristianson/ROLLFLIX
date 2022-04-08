@@ -11,7 +11,7 @@
 - User created "to watch" and "watched" lists 
 
 ## Link
-Try the [**Movie Generator**!](https://amplifyrebel.github.io/movie-generator/) app
+Try the [**Movie Generator**](https://amplifyrebel.github.io/movie-generator/) app
 
 ## Demo
 Click [**here**](https://youtu.be/__Xxidc2sFY) to view a walkthrough/demo on YouTube
