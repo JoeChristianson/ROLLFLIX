@@ -24,9 +24,9 @@
 
 ## Screenshots
 
-![Main Screenshot](/relative/path/to/img.jpg?raw=true "Main Screenshot")
-![Search](/relative/path/to/img.jpg?raw=true "Search")
-![Watched Movies Modal](/relative/path/to/img.jpg?raw=true "Watched Movies Modal")
+![Main Screenshot](./assets/screenshots/screenshot.png "Main Screenshot")
+![Search](./assets/screenshots/ss2.png "Search")
+![Watched Movies Modal](./assets/screenshots/ss3.png "Watched Movies Modal")
 
 
 ## Link
