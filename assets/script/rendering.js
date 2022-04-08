@@ -100,9 +100,12 @@ async function renderNew(titleInput){
         let watchedBtn = $("<button>");
         watchedBtn.text("Watched?")
         watchedBtn.on("click",e=>{
-            const ratingsOpen = $("<div>")
-            ratingsOpen.html(stars);
-            title.append(ratingsOpen);
+            if(!starsOpen){
+                const ratingsOpen = $("<div>")
+                ratingsOpen.html(stars);
+                title.append(ratingsOpen);
+                starsOpen=true;
+            }
             
         })
         watchedBtn.addClass("watched-button")

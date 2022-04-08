@@ -25,7 +25,7 @@ const getRandomMovie = async () => {
 		await getRandomMovie();
 	} else {
 		current = data;
-		current.Runtime = current.Runtime.split(" ")[0];
+		current.Runtime = parseInt(current.Runtime.split(" ")[0]);
 	}
 	return current;
 };

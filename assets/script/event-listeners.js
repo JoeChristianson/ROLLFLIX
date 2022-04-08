@@ -9,6 +9,7 @@ const thumbUp = $(".thumbUp");
 const randomMovie = $(".randomMovie");
 const thumbDown = $(".thumbDown");
 const directionButton = $("#direction");
+let starsOpen = false;
 
 thumbUp.on("click", (e) => {
 	addMovieToPicks();
@@ -52,6 +53,7 @@ body.on("click", ".star", (e) => {
 	localStorage.setItem("watched", JSON.stringify(watched));
 	pullVals();
 	renderNew("random");
+	starsOpen=false;
 	fillWatched();
 });
 
