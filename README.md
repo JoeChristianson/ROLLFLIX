@@ -47,3 +47,6 @@ Jackson Williams - Javascript, APIs, Debugging (add_email)
 
 Joe Christianson - Javascript, APIs, Debugging - joechristiansonwebdev@gmail.com
 
+## License
+
+![](https://img.shields.io/badge/License-MIT-yellowgreen)
