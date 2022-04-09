@@ -40,7 +40,10 @@ Click [**here**](https://youtu.be/__Xxidc2sFY) to view a walkthrough/demo on You
 ## Team
 
 Ethan Johnson - Project Manager, HTML, CSS, Debugging (add_email)
+
 Sarah Turner - HTML, CSS, Debugging (add_email)
+
 Jackson Williams - Javascript, APIs (add_email)
+
 Joe Christianson - Javascript, APIs - joechristiansonwebdev@gmail.com
 
