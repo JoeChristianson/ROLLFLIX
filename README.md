@@ -43,7 +43,7 @@ Ethan Johnson - Project Manager, HTML, CSS, Debugging (add_email)
 
 Sarah Turner - HTML, CSS, Debugging (add_email)
 
-Jackson Williams - Javascript, APIs (add_email)
+Jackson Williams - Javascript, APIs, Debugging (add_email)
 
-Joe Christianson - Javascript, APIs - joechristiansonwebdev@gmail.com
+Joe Christianson - Javascript, APIs, Debugging - joechristiansonwebdev@gmail.com
 
