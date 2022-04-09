@@ -36,3 +36,11 @@ Try the [**Movie Generator**](https://amplifyrebel.github.io/movie-generator/) a
 ## Demo
 
 Click [**here**](https://youtu.be/__Xxidc2sFY) to view a walkthrough/demo on YouTube
+
+## Team
+
+Ethan Johnson - Project Manager, HTML, CSS, Debugging (add_email)
+Sarah Turner - HTML, CSS, Debugging (add_email)
+Jackson Williams - Javascript, APIs (add_email)
+Joe Christianson - Javascript, APIs - joechristiansonwebdev@gmail.com
+
