@@ -1,7 +1,16 @@
 body {
   background-color: #3d4b5f;
-
+  height: 102vh;
 }
+
+header{
+  height: 15vh;
+}
+
+main{
+  height: 85vh;
+}
+
 /* header styling */
 .hero-body{
   background-color:#3d4b5f;

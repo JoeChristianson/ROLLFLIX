@@ -17,32 +17,29 @@
   <link rel="stylesheet" href="./assets/css/modal.css">
   <link rel="stylesheet" href="./assets/css/queue.css">
 
-  <title>Movie Generator</title>
+  <title>ROLL FLIX</title>
 </head>
 
 <body>
-  <section class="hero is-link">
-    <div class="hero-body">
-      <p class="title">
-        Movie Generator &#127871
-      </p>
-    </div>
-  </section>
+  <header class="movieGenerator columns" id="randomMovieGenerator">
+    <h1 class="is-size-1 column is-one-third">        ROLL FLIX &#127871</h1>
+    <div class="column is-one-third">
 
-  <div class="columns">
-    <div class="column">
-      <!-- Movie generator buttons -->
-      <p class="movieGenerator" id="randomMovieGenerator">
-        <button class="button thumbUp is-large"> &#128077
-        </button>
-        <button class="button is randomMovie is-large">Random Movie</button>
-        <button class="button thumbDown is-large">&#128078
-        </button>
-        <br>
-        <button class=" button is-normal js-modal-trigger" data-target="modal-js-example">
-          Click for Watched Movies
-        </button>
-      </p>
+      <button class="button thumbUp is-large"> &#128077
+      </button>
+      <button class="button is randomMovie is-large">Random Movie</button>
+      <button class="button thumbDown is-large">&#128078
+      </button>
+    </div>
+    <div class="column is-one-third">
+
+      <button class=" button is-normal js-modal-trigger" data-target="modal-js-example">
+        Click for Watched Movies
+      </button>
+    </div>
+  </header>
+
+    <main class="columns">
       <div class="columns">
         <div class="column is-2">
           <aside class="sidenav">
@@ -139,8 +136,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <footer class="footer"></footer>
+
 <!-- modal -->
   <div id="modal-js-example" class="modal">
     <div class="modal-background"></div>
